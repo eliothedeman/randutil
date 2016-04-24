@@ -14,7 +14,7 @@ const (
 
 // Bytes returns a random []byte of a certain length
 func Bytes(length int) []byte {
-	buff := make([]byte, 0, length)
+	buff := make([]byte, length)
 	for i := range buff {
 		buff[i] = Uint8()
 	}
