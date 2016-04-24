@@ -12,6 +12,15 @@ const (
 	Ascii        = Alphanumeric + "~!@#$%^&*()-_+={}[]\\|<,>.?/\"';:`"
 )
 
+// Bytes returns a random []byte of a certain length
+func Bytes(length int) []byte {
+	buff := make([]byte, 0, length)
+	for i := range buff {
+		buff[i] = Uint8()
+	}
+	return buff
+}
+
 // String returns a random string n characters long, composed of entities
 // from charset.
 func String(length int, charset string) string {
